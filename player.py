@@ -17,9 +17,16 @@ class Player:
         pg.draw.circle(tile, D_RED, (MID_TILE, MID_TILE), MID_TILE / 2)
         return tile
     
-    def pos(self):
+    def get_pos(self):
         return (self.column * TILE_SIZE, self.row * TILE_SIZE)
     
+    def get_tile(self):
+        return (self.column, self.row)
+
+    def set_tile(self, tile):
+        self.column = tile[0]
+        self.row = tile[1]
+
     def update(self, key_pressed) -> None:
         if key_pressed == pg.K_UP:
             self.row -= 1
