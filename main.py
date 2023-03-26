@@ -1,6 +1,5 @@
 import pygame as pg
 import sys
-from const import TILES_HORIZONTAL, TILES_VERTICAL, TILE_SIZE, COLOUR_LIST
 from maps import MAP1
 from player import Player
 from renderer import Renderer
