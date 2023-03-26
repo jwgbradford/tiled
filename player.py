@@ -1,5 +1,5 @@
 import pygame as pg
-from const import BLACK, D_RED, TILE_SIZE, TILES_HORIZONTAL, TILES_VERTICAL
+from const import BLACK, D_RED, TILE_SIZE, TILES_VERTICAL
 
 class Player:
     def __init__(self) -> None:
