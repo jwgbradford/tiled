@@ -48,7 +48,8 @@ MAPS = {
                 [
                     (8, 3), 'sea_bed'
                 ]
-            ]
+            ],
+        'npc' : []
         },
     'town_1' : {
         'map' : TOWN,
@@ -57,8 +58,13 @@ MAPS = {
                 [
                     (4, 0), 'start'
                 ]
+            ],
+        'npc' : 
+        [
+            [
+                (2, 3), 6
             ]
-        },
+        ]        },
     'sea_bed' : {
         'map' : SEABED, 
         'locations' : 
@@ -66,6 +72,7 @@ MAPS = {
                 [
                     (1, 5), 'start'
                 ]
-            ]
+            ],
+        'npc' : []
         }
 }

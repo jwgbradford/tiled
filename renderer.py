@@ -30,7 +30,16 @@ class Renderer:
         #set a surface, ready to be sent to the screen
         self.background_map = background
 
-    def update_graphics(self, player_costume, player_pos) -> None:
+    def update_graphics(self, player, map, npc_list) -> None:
             self.game_window.blit(self.background_map, (0,0))
-            self.game_window.blit(player_costume, (player_pos()))
+            # get our costume & position for the player
+            player_image = player.get_costume()
+            player_pos = player.get_pos()
+            self.game_window.blit(player_image, player_pos)
+            for npc in npc_list:
+                if npc.get_map() == map:
+                    # get our costume & position for the npc
+                    npc_image = npc.get_costume()
+                    npc_pos = npc.get_pos()
+                    self.game_window.blit(npc_image, npc_pos)            
             pg.display.update()
